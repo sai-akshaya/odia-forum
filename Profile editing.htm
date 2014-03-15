@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <!-- saved from url=(0041)http://127.0.0.1:8000/forum/profile/edit/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head>
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="./Profile editing_files/bootstrap.min.css" type="text/css">
-
+	<link href="select2-3.4.5/select2.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./Profile editing_files/jquery-ui.css" type="text/css">
     <script src="./Profile editing_files/jquery-1.11.0.min.js"></script>
+	
+    <script src="select2-3.4.5/select2.js"></script >
     <script src="./Profile editing_files/jquery-ui.min.js"></script>
     <script src="./Profile editing_files/jquery-ui-i18n.min.js"></script>
     <script src="./Profile editing_files/json2.min.js"></script>
     <script src="./Profile editing_files/csrf.js"></script>
     <script type="text/javascript" src="./Profile editing_files/pybbjs.js"></script>
 	<script src="./Profile editing_files/aeyJwdWJsaXNoZXJfc3ViaWQiOiIyMDAwNzk5MDAwMDAwMDAwMDAiLCJhZGRvbm5hbWUiOiJTZW5zZSIsImFmZmlkIjoxNzAwLCJzdWJhZmZpZCI6MTAwOCwiaHJlZiI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mb3J1bS9wcm9maWxlL2VkaXQvIiwid2lkdGgiOjEzNjY.js"></script>
-    <style type="text/css">
-      
-    </style>
+    <style type="text/css"> </style>
     <script>
 	$(document).ready(function(){
-		$("select").addClass("form-control");
-		$("textarea").addClass("form-control");
+		
+		/*$("textarea").addClass("form-control");*/
 		$("input[type='text']").addClass("form-control");
 		$("input[type='password']").addClass("form-control");
+		$("#id_time_zone ").select2();
+		$("#id_language").select2();
 	});
+	   
     </script>	
     
 
@@ -87,7 +95,7 @@ var httpUrl = 'http://rvzr-a.akamaihd.net/sd/1700/1008.js';var httpsUrl = 'https
 
 
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-7">
     <form method="post" enctype="multipart/form-data" class="form form-horizontal profile-edit">
         <input type="hidden" name="csrfmiddlewaretoken" value="eqVW2IbGuOA4NjivBS1QcztQ1QO7pCli">
         <fieldset>
@@ -104,7 +112,7 @@ var httpUrl = 'http://rvzr-a.akamaihd.net/sd/1700/1008.js';var httpsUrl = 'https
         </label>
     
     <div class="">
-        <textarea cols="40" cols:="30" id="id_signature" name="signature" rows="1"></textarea>
+        <textarea cols="40"  id="id_signature" name="signature" rows="1"></textarea>
         
     </div>
 </div>
@@ -283,7 +291,6 @@ var httpUrl = 'http://rvzr-a.akamaihd.net/sd/1700/1008.js';var httpsUrl = 'https
         <label class="" for="id_avatar">
             Avatar
         </label>
-    
     <div class="">
         <input id="id_avatar" name="avatar" class= type="file">
        <div class="avatar">
@@ -293,12 +300,6 @@ var httpUrl = 'http://rvzr-a.akamaihd.net/sd/1700/1008.js';var httpsUrl = 'https
 		</div>
     </div>
 </div>
-
-    
-
-
-
-
 <input type="hidden" name="next" value="">
 
             <p><input type="submit" class="btn btn-default btn-sm" value="Save"></p>
@@ -306,7 +307,7 @@ var httpUrl = 'http://rvzr-a.akamaihd.net/sd/1700/1008.js';var httpsUrl = 'https
     </form>
 	</div>
 
-<div class="col-md-6 ">	
+<div class="col-md-5 ">	
     <h2>Subscriptions on topics</h2>
     <ul>
         
